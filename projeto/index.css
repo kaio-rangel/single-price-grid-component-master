@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+ font-family: karla;
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+main{display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:hsl(204, 43%, 93%);
+}
+.box{
+    display: grid;
+    grid-template-areas:" intro intro"
+                        "price info";
+grid-template-columns: 350px 350px;
+grid-template-rows: 250px 250px;
+}
+.intro{
+    background-color:hsl(0, 0%, 100%);
+    grid-area: intro;
+    /* width: 600px; */
+    padding: 30px;
+}
+.intro h1{
+    color: hsl(179, 62%, 43%);
+    padding-bottom: 20px;
+}
+.intro h3{
+    color: hsl(71, 73%, 54%);
+    padding-bottom: 30px;
+    
+}
+.intro p{
+    font-size: 15px;
+        color: hsl(218, 22%, 67%);
+}
+.mensal{
+    grid-area: price;
+    background-color:hsl(179, 62%, 43%);
+    color: hsl(204, 43%, 93%);
+    padding: 40px;
+    padding-left: 60px;
+}
+.mensal h2{
+    font-weight:400;
+    font-size: 18px;
+    padding-bottom: 25px;
+}
+.price{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.price span{
+padding-top: 3px;
+color: hsla(216, 42%, 95%, 0.705);
+}
+.mensal p{
+    font-weight: 300;
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+.mensal button{
+ background-color:  hsl(71, 73%, 54%);
+ color: white;
+ width: 220px;
+ height: 45px;
+ border: none;
+ border-radius: 5px;
+}
+.info{
+    grid-area: info;
+    background-color:hsl(179, 61%, 46%);
+    color: hsl(204, 43%, 93%);
+    padding: 40px;
+}
+.info h2{
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.info p{
+    font-weight: 300;
+    font-size: 14px;
+    padding-right: 80px;
+}
+@media (max-width: 500px){
+    .box{
+        display: grid;
+        grid-template-areas:"intro"
+                            "price"
+                            "info";
+    grid-template-columns: 350px;
+    grid-template-rows: 300px;
+    }
+}
